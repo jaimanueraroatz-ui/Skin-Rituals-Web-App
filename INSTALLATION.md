@@ -133,6 +133,56 @@ npm run lint
 
 Since this app uses localStorage for data storage, it works completely offline once loaded. No internet connection is required for core functionality after the initial setup.
 
+## Deploying to GitHub Pages
+
+The app is configured for automatic deployment to GitHub Pages.
+
+### Automatic Deployment (Recommended)
+
+1. **Enable GitHub Pages**:
+   - Go to your repository **Settings** → **Pages**
+   - Under **Source**, select **GitHub Actions**
+
+2. **Push to main branch**:
+   ```bash
+   git add .
+   git commit -m "Deploy to GitHub Pages"
+   git push origin main
+   ```
+
+3. **Wait for deployment** (2-3 minutes):
+   - Check the **Actions** tab to monitor progress
+   - Your site will be live at: `https://yourusername.github.io/Habit-Tracker-Web-App/`
+
+### Manual Deployment
+
+If you prefer manual deployment:
+
+```bash
+# Build the project
+npm run build
+
+# The built files are in the dist/ folder
+# Upload these to your hosting provider
+```
+
+### Deployment to Other Platforms
+
+**Vercel**:
+```bash
+npm install -g vercel
+vercel
+```
+
+**Netlify**:
+```bash
+npm install -g netlify-cli
+netlify deploy --prod
+```
+
+**Static File Hosting**:
+Upload the contents of the `dist/` folder to any static hosting service (AWS S3, Cloudflare Pages, etc.)
+
 ---
 
 💡 **Need help?** Check the [main README](README.md) for more information about the app features and usage.
